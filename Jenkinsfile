@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo 'Hi' > msg
-                cat msg
+                sh 'echo Hi > msg'
+                sh 'cat msg'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                cat msg
+                sh 'cat msg'
             }
         }
         stage('Deploy') {
